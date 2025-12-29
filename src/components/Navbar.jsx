@@ -1,23 +1,29 @@
 import { NavLink } from "react-router-dom";
 
 const linkClass = ({ isActive }) =>
-  `px-3 py-2 rounded-md text-sm font-medium transition ${
-    isActive ? "bg-white/10" : "hover:bg-white/10"
+  `rounded-md px-3 py-2 text-sm font-medium transition ${
+    isActive ? "bg-black text-white" : "text-black/70 hover:text-black hover:bg-black/5"
   }`;
 
 export default function Navbar() {
   return (
-    <header className="sticky top-0 border-b border-white/10 bg-black/40 backdrop-blur">
-      <nav className="mx-auto max-w-5xl px-6 py-3 flex gap-2">
-        <NavLink to="/" className={linkClass}>
-          Home
+    <header className="sticky top-0 z-50 border-b bg-white/80 backdrop-blur">
+      <nav className="mx-auto max-w-5xl px-6 py-3 flex items-center justify-between">
+        <NavLink to="/" className="font-semibold tracking-tight">
+          Tobin Richards
         </NavLink>
-        <NavLink to="/about" className={linkClass}>
-          About Me
-        </NavLink>
-        <NavLink to="/projects" className={linkClass}>
-          Projects
-        </NavLink>
+
+        <div className="flex items-center gap-2">
+          <NavLink to="/" className={linkClass}>
+            Home
+          </NavLink>
+          <NavLink to="/about" className={linkClass}>
+            About
+          </NavLink>
+          <NavLink to="/projects" className={linkClass}>
+            Projects
+          </NavLink>
+        </div>
       </nav>
     </header>
   );

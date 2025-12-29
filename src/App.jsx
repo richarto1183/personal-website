@@ -1,14 +1,17 @@
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+
 export default function App() {
   return (
-    <main className="min-h-screen grid place-items-center">
-      <section className="text-center px-6">
-        <h1 className="text-5xl font-bold mb-4">Tobin Richards</h1>
-        <p className="text-lg max-w-md mx-auto">
-          I am a software developer interested in web development, QA, and
-          building clean, reliable applications.
-        </p>
-      </section>
-    </main>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/projects" element={<Projects />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
-

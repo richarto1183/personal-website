@@ -31,7 +31,7 @@ export default function Contact() {
         name: name.trim(),
         email: email.trim().toLowerCase(),
         message: message.trim(),
-	createdAt: serverTimestamp(),
+        createdAt: serverTimestamp(),
       });
 
       setStatus({ type: "success", text: "Message sent! Thanks for reaching out." });
@@ -39,8 +39,8 @@ export default function Contact() {
       setEmail("");
       setMessage("");
     } catch (err) {
-      console.error("Firestore error:", err);
-      setStatus({ type: "error", text: "Failed to send message." });
+      console.error(err);
+      setStatus({ type: "error", text: "Something went wrong. Please try again." });
     } finally {
       setLoading(false);
     }

@@ -13,9 +13,9 @@ export default function Home() {
       </h1>
 
       <p className="text-lg text-black/70 max-w-2xl leading-relaxed">
-        I’m a software developer interested in web development, QA, and building clean,
-        reliable applications. I like writing clean code, testing thoroughly, and shipping
-        projects that people can actually use.
+        I’m a computer science student at Grand Valley State University with a strong interest in 
+	software development and AI. I enjoy building reliable software, learning new technologies, 
+	and gaining hands-on experience through real-world projects.
       </p>
 
       <div className="flex flex-wrap gap-3 pt-2">

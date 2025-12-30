@@ -23,6 +23,9 @@ export default function Navbar() {
           <NavLink to="/projects" className={linkClass}>
             Projects
           </NavLink>
+	  <NavLink to="/contact" className={linkClass}>
+	    Contact Me
+	  </NavLink>
         </div>
       </nav>
     </header>

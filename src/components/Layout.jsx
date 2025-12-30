@@ -1,3 +1,4 @@
+import { Mail, Github, Instagram } from "lucide-react";
 import Navbar from "./Navbar";
 
 export default function Layout({ children }) {
@@ -15,7 +16,7 @@ export default function Layout({ children }) {
               <img
                 src="/profile.jpeg"
                 alt="Tobin Richards"
-                className="h-32 w-32 rounded-full object-cover border mx-auto"
+                className="h-32 w-32 rounded-full object-cover ring-1 ring-black/10 mx-auto transition hover:scale-105"
               />
 
               <div className="mt-4 text-center">
@@ -30,25 +31,28 @@ export default function Layout({ children }) {
               <div className="mt-6 space-y-2 text-sm">
                 <a
                   href="mailto:richarto@mail.gvsu.edu"
-                  className="block text-blue-600 hover:underline"
+                  className="flex items-center gap-2 text-black/70 hover:text-black hover:translate-x-0.5 transition"
                 >
-                  Email
+	          <Mail size={16} />
+                  <span>Email</span>
                 </a>
                 <a
                   href="https://github.com/richarto1183"
                   target="_blank"
                   rel="noreferrer"
-                  className="block text-blue-600 hover:underline"
+                  className="flex items-center gap-2 text-black/70 hover:text-black hover:translate-x-0.5 transition"
                 >
-                  GitHub
+	          <Github size={16} />
+                  <span>GitHub</span>
                 </a>
                 <a
                   href="https://www.instagram.com/toby_richards83/#"
                   target="_blank"
                   rel="noreferrer"
-                  className="block text-blue-600 hover:underline"
+                  className="flex items-center gap-2 text-black/70 hover:text-black hover:translate-x-0.5 transition"
                 >
-                  Instagram
+	          <Instagram size={16} />
+                  <span>Instagram</span>
                 </a>
               </div>
             </div>

@@ -31,6 +31,7 @@ export default function Contact() {
         name: name.trim(),
         email: email.trim().toLowerCase(),
         message: message.trim(),
+	createdAt: serverTimestamp(),
       });
 
       setStatus({ type: "success", text: "Message sent! Thanks for reaching out." });
